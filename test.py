@@ -379,7 +379,7 @@ def app_view():
                     {"text": lot8,      "x": 113, "y": 80,  "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
                     {"text": ordre2,    "x": 113, "y": 295, "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
                     {"text": "Voir planning", "x": 113, "y": 378, "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
-                    # >>> NEW: Date d'expiration placée à x=96, y=500
+                    # >>> NEW: Date d'expiration placée à x=96, y=575
                     {"text": exp_txt,   "x": 96,  "y": 575, "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
                 ]
 
@@ -397,8 +397,14 @@ def app_view():
     if tmp and os.path.isdir(tmp): shutil.rmtree(tmp, ignore_errors=True)
 
 # ================= ROUTEUR =================
-if st.session_state.step == "login":
+step = st.session_state.get("step", "login")
+if step == "login":
     login_view()
-elif st.session_state.step == "profile":
+elif step == "profile":
     profile_view()
-    
+elif step == "app":
+    app_view()
+else:
+    # fallback au cas où l'état est corrompu
+    st.session_state.step = "login"
+    st.rerun()
