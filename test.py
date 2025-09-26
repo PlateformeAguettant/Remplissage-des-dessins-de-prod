@@ -24,9 +24,9 @@ COL_EXP_CANDIDATES = [
 # ====== Comptes démo ======
 USERS = {
     "safae": {"password": "1234"},
-    "Benjamin": {"password": "BnSzny2023v6"},
-    "Sandra": {"password": "sasoare"},
-    "Geoffrey": {"password": "Aguettant2025"},
+    "benjamin": {"password": "BnSzny2023v6"},
+    "sandra": {"password": "sasoare"},
+    "geoffrey": {"password": "Aguettant2025"},
 }
 
 # ====== Icônes locales ======
@@ -408,3 +408,4 @@ else:
     # fallback au cas où l'état est corrompu
     st.session_state.step = "login"
     st.rerun()
+
