@@ -408,4 +408,3 @@ else:
     # fallback au cas où l'état est corrompu
     st.session_state.step = "login"
     st.rerun()
-
