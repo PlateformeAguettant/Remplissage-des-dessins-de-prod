@@ -376,7 +376,7 @@ def app_view():
                 elements = [
                     {"text": full_name, "x": 56,  "y": 688, "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
                     {"text": date_txt,  "x": 78,  "y": 670, "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
-                    {"text": lot8,      "x": 113, "y": 80,  "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
+                    {"text": lot8,      "x": 115, "y": 80,  "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
                     {"text": ordre2,    "x": 113, "y": 295, "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
                     {"text": "Voir planning", "x": 113, "y": 378, "angle": 90, "size": FONT_SIZE, "opacity": OPACITY, "font": FONT_NAME},
                     # >>> NEW: Date d'expiration placée à x=96, y=575
@@ -408,3 +408,4 @@ else:
     # fallback au cas où l'état est corrompu
     st.session_state.step = "login"
     st.rerun()
+
